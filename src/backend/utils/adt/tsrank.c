@@ -658,8 +658,8 @@ get_docrep(TSVector txt, QueryRepresentation *qr, int *doclen)
 			}
 			else
 			{
-				dimt = POSNULL.npos;
-				post = POSNULL.pos;
+				entry++;
+				continue;
 			}
 
 			while (cur + dimt >= len)
