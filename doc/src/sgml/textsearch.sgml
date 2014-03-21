@@ -891,7 +891,11 @@ SELECT plainto_tsquery('english', 'The Fat &amp; Rats:C');
        <para>
         This function requires positional information in its input.
         Therefore it will not work on <quote>stripped</> <type>tsvector</>
-        values &mdash; it will always return zero.
+        values &mdash; it will always return zero. If a <type>tsvector</>
+        contains stripped and unstripped lexemes, only the unstripped lexemes
+        will be considered. (See <xref linkend="textsearch-manipulate-tsvector"> 
+        for more information about the <function>strip</> function and 
+        positional information in <type>tsvector</>s.)
        </para>
       </listitem>
      </varlistentry>
